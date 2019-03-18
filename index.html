@@ -209,7 +209,7 @@
                <div style='height:19px'></div>
                <div class="row">
     <div style="margin: 0 auto;">
-    <a href="#" class="previous btn-circle btn">‹</a>
+    <a href="#" class="prev btn-circle btn">‹</a>
 <a href="#" class="next btn-circle btn">›</a>
     </div>
     <div style='height:96px'></div>
@@ -287,7 +287,7 @@ String.prototype.isLatin=function(){return this==this.latinise()}
         name = name[1];
       }
       var chapter_filename = "data/"+chapter+".json";
-      
+       var jsonstorychapter = "data/chapter_"+story+".json";
       if (type=='chapter'){
       
       $.getJSON(chapter_filename, function(json) {
@@ -300,10 +300,45 @@ String.prototype.isLatin=function(){return this==this.latinise()}
       
       
       });
+
+      $.getJSON(jsonstorychapter, function(json) {
+      var index = Object.keys(json).indexOf(chapter);
+var next = "#";
+var prev  ="#";
+if(index==0){
+   $("#chapter").find('.prev').addClass('.disable');
+   let key = Object.keys(json)[1];
+   let value= json[key];
+    let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
+   next  =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
+   pre  ="#"
+
+}else if(index ==Object.keys(json).length){
+    let key = Object.keys(json)[Object.keys(json).length-1];
+   let value= json[key];
+    let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
+   prev  =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
+   next ="#";
+}else{
+     let key = Object.keys(json)[index-1];
+   let value= json[key];
+    let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
+    prev   =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
+
+     key = Object.keys(json)[index+1];
+      value= json[key];
+      chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
+         next =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
+}
+
+$("#chapter").find('.next').attr('src',next);
+   $("#chapter").find('.prev').attr('src',prev);
+      
+      });
       }else if(type=='story'){
         $('#story').removeClass("d-none");
       var jsonstoryname = "data/s_"+story+".json";
-      var jsonstorychapter = "data/chapter_"+story+".json";
+     
         https://www.phamduytung.com/xem-truyen/?type=story&story=9035&name=ngan-thuan-ngan-ai-muoi
       
          $.getJSON(jsonstoryname, function(json) {
