@@ -302,8 +302,10 @@ String.prototype.isLatin=function(){return this==this.latinise()}
       var index = Object.keys(json).indexOf(chapter);
 var next = "#";
 var prev  ="#";
+  $("#chapter").find('.next').removeClass('disabled');
+   $("#chapter").find('.prev').removeClass('disabled');
 if(index==0){
-   $("#chapter").find('.prev').addClass('.disable');
+   $("#chapter").find('.prev').addClass('disabled');
    let key = Object.keys(json)[1];
    let value= json[key];
     let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
@@ -316,6 +318,7 @@ if(index==0){
     let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
    prev  =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
    next ="#";
+    $("#chapter").find('.next').addClass('disabled');
 }else{
      let key = Object.keys(json)[index-1];
    let value= json[key];
