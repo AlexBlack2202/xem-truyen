@@ -25,7 +25,6 @@
          padding: 0;
          border: none;
          box-sizing: border-box;
-         font: inherit;
          color: inherit;
          background: none;
          -webkit-appearance: none;
@@ -350,7 +349,7 @@ $("#chapter").find('.next').attr('href',next);
         document.title = json.storyname;
         $('#story').find('.storyname').html(json.storyname);
         $('#story').find('.img').attr('src',json.imageurl);
-        $('#story').find('.shortcontent').html(json.shortcontent);
+        $('#story').find('.shortcontent').html(json.shortcontent.replace(/(<br\s*\/?>){3,}/gi, '<br>'));
       $('#story').children('.author').html("<b>Tác giả: </b>"+json.author);
         
       
