@@ -305,11 +305,11 @@ var prev  ="#";
    $("#chapter").find('.prev').removeClass('disabled');
 
 if('preurl'  in json){
-   pre = json.preurl;
+   prev = json.preurl;
 }
 else{
    $("#chapter").find('.prev').addClass('disabled');
-   pre ='#';
+   prev ='#';
 }
 
 if ('nexturl' in json){
