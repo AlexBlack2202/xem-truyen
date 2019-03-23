@@ -285,8 +285,9 @@ String.prototype.isLatin=function(){return this==this.latinise()}
       }else{
         name = name[1];
       }
+
       var chapter_filename = "data/"+chapter+".json";
-       var jsonstorychapter = "data/chapter_"+story+".json";
+       
       if (type=='chapter'){
       
       $.getJSON(chapter_filename, function(json) {
@@ -297,14 +298,31 @@ String.prototype.isLatin=function(){return this==this.latinise()}
         $('#chapter').children('.chaptername').html(json.header);
       
       storyname = json.storyname.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
-        $.getJSON(jsonstorychapter, function(json) {
-      var index = Object.keys(json).indexOf(chapter);
+   
 var next = "#";
 var prev  ="#";
   $("#chapter").find('.next').removeClass('disabled');
    $("#chapter").find('.prev').removeClass('disabled');
-if(index==0){
+
+if('preurl'  in json){
+   pre = json.preurl;
+else{
    $("#chapter").find('.prev').addClass('disabled');
+   pre ='#';
+}
+
+if ('nexturl' in json){
+   next = json.nexturl;
+   $("#chapter").find('.next').addClass('disabled');
+else{
+   next = '#';
+}
+
+
+$("#chapter").find('.next').attr('href',next);
+   $("#chapter").find('.prev').attr('href',prev);
+
+   
    let key = Object.keys(json)[1];
    let value= json[key];
     let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
@@ -330,10 +348,8 @@ if(index==0){
          next =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
 }
 
-$("#chapter").find('.next').attr('href',next);
-   $("#chapter").find('.prev').attr('href',prev);
+
       
-      });
       
       });
 
@@ -356,15 +372,14 @@ $("#chapter").find('.next').attr('href',next);
       
       });
       
-      
+      var jsonstorychapter = "data/chapter_"+story+".json";
       $.getJSON(jsonstorychapter, function(json) {
       $('#story').find('.chapter').html("");
-       $.each( json, function( key, value ) {
-         let storyname = name;
-         let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
-         let link = "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
-      $('#story').find('.chapter').append("<li class='col-md-6' style='font-size:16px'><a style='color:#333' href='"+link+"'>"+value+"</a></li>");
-      });
+       for (item in json) {
+         let chaptername = item.header;
+         let link = item.url;
+      $('#story').find('.chapter').append("<li class='col-md-6' style='font-size:16px'><a style='color:#333' href='"+link+"'>"+chaptername+"</a></li>");
+      };
       });
       }else{
           $('#index').removeClass("d-none");
