@@ -314,6 +314,7 @@ else{
 if ('nexturl' in json){
    next = json.nexturl;
    $("#chapter").find('.next').addClass('disabled');
+}
 else{
    next = '#';
 }
@@ -322,35 +323,7 @@ else{
 $("#chapter").find('.next').attr('href',next);
    $("#chapter").find('.prev').attr('href',prev);
 
-   
-   let key = Object.keys(json)[1];
-   let value= json[key];
-    let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
-   next  =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
-   pre  ="#"
 
-}else if(index ==Object.keys(json).length){
-    let key = Object.keys(json)[Object.keys(json).length-1];
-   let value= json[key];
-    let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
-   prev  =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
-   next ="#";
-    $("#chapter").find('.next').addClass('disabled');
-}else{
-     let key = Object.keys(json)[index-1];
-   let value= json[key];
-    let chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
-    prev   =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
-
-     key = Object.keys(json)[index+1];
-      value= json[key];
-      chaptername = value.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
-         next =  "?type=chapter&chapter="+key+"&story="+story+"&name="+storyname+"-"+chaptername;
-}
-
-
-      
-      
       });
 
     
