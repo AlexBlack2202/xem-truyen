@@ -306,6 +306,7 @@ var prev  ="#";
 
 if('preurl'  in json){
    pre = json.preurl;
+}
 else{
    $("#chapter").find('.prev').addClass('disabled');
    pre ='#';
@@ -313,9 +314,10 @@ else{
 
 if ('nexturl' in json){
    next = json.nexturl;
-   $("#chapter").find('.next').addClass('disabled');
+   
 }
 else{
+   $("#chapter").find('.next').addClass('disabled');
    next = '#';
 }
 
