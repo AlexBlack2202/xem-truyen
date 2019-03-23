@@ -358,11 +358,11 @@ $("#chapter").find('.next').attr('href',next);
       var jsonstorychapter = "data/chapter_"+story+".json";
       $.getJSON(jsonstorychapter, function(json) {
       $('#story').find('.chapter').html("");
-       for (item in json) {
-         let chaptername = item.header;
-         let link = item.url;
+       for (i =0;i<json.length;i++){
+         let chaptername = json[i].header;
+         let link = json[i].url;
       $('#story').find('.chapter').append("<li class='col-md-6' style='font-size:16px'><a style='color:#333' href='"+link+"'>"+chaptername+"</a></li>");
-      };
+      }
       });
       }else{
           $('#index').removeClass("d-none");
