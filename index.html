@@ -308,7 +308,7 @@ String.prototype.isLatin=function(){return this==this.latinise()}
       $('#chapter').removeClass("d-none");
         document.title = json.storyname+" - "+json.header;
         $('#chapter').children('.content').html(json.datacontent);
-        $('#chapter').children('.storyname').html(json.storyname);
+        $('#chapter').find('.storyname').html(json.storyname);
         $('#chapter').children('.chaptername').html(json.header);
       
       storyname = json.storyname.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
