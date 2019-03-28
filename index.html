@@ -58,6 +58,10 @@
          text-decoration: none;
          color:white;
          }
+		 
+		 a.storyname{
+		 color:green;
+		 }
          .news-tittle{
          font-size: 21px;
          line-height: 27px;
@@ -199,7 +203,8 @@
       <main class="container" role="main">
          <div style="font-size: 28px; font-family: palatino linotype,arial,times new roman,sans-serif; line-height: 1.7;">
             <div id="chapter" class="d-none">
-               <div class="storyname" style="text-align: center;padding: 10px 0; color: green; font-size: 36px; font-weight: bold;">
+               <divstyle="text-align: center;padding: 10px 0; color: green; font-size: 36px; font-weight: bold;">
+			   <a href="#"  class="storyname"></a>
                </div>
                <div class="chaptername" style="text-align: center;padding-bottom: 10px; font-size: 30px; font-weight: bold;">
                </div>
@@ -307,6 +312,9 @@ String.prototype.isLatin=function(){return this==this.latinise()}
         $('#chapter').children('.chaptername').html(json.header);
       
       storyname = json.storyname.latinize().replace(/ /g,"-").replace(":","").toLowerCase();
+	  
+	  story_link = "?type=story&story="+story"&name="+storyname
+		$('#story').find('.storyname').attr("href",story_link);
    
 var next = "#";
 var prev  ="#";
@@ -348,6 +356,7 @@ $("#chapter").find('.next').attr('href',next);
       
         document.title = json.storyname;
         $('#story').find('.storyname').html(json.storyname);
+		
         $('#story').find('.img').attr('src',json.imageurl);
         $('#story').find('.shortcontent').html(json.shortcontent.replace(/(<br\s*\/?>){3,}/gi, '<br>'));
       $('#story').children('.author').html("<b>Tác giả: </b>"+json.author);
