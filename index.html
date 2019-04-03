@@ -9,6 +9,8 @@
       <meta name="GENERATOR" content="Phạm Duy Tùng">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="application-name" content="Phạm Duy Tùng Blog">
+	  <meta name="description" content="">
+	  <meta name="keywords" content="">
 <meta name="msapplication-tooltip" content="Site truyện tổng hợp của Phạm Duy Tùng">
 <meta name="author" content="Phạm Duy Tùng">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
@@ -317,6 +319,7 @@ function re_load(callback) {
             $('#chapter').children('.chaptername').html(json.header);
 
             storyname = json.storyname.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
+			header = json.header.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
 
             story_link = "?type=story&story=" + story + "&name=" + storyname
             $('#chapter').find('.storyname').attr("href", story_link);
@@ -344,6 +347,13 @@ function re_load(callback) {
 
             $("#chapter").find('.next').attr('href', next);
             $("#chapter").find('.prev').attr('href', prev);
+			
+			 
+// Change Meta Description 
+$('meta[name=description]').attr('content', json.storyname + " - " + json.header);
+ 
+// Change Meta Keywords 
+$('meta[name=keywords]').attr('content', json.storyname + ", " + json.header+", "+storyname+", "+header);
 
 callback();
         });
@@ -363,7 +373,13 @@ callback();
             $('#story').find('.img').attr('src', json.imageurl);
             $('#story').find('.shortcontent').html(json.shortcontent.replace(/(<br\s*\/?>){3,}/gi, '<br>'));
             $('#story').children('.author').html("<b>Tác giả: </b>" + json.author);
+// Change Meta Description 
+$('meta[name=description]').attr('content', json.storyname +" - "+ json.author);
 
+storyname = json.storyname.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
+ 
+// Change Meta Keywords 
+$('meta[name=keywords]').attr('content', json.storyname + ", " + json.author+", "+storyname);
 
 callback();
         });
@@ -379,6 +395,12 @@ callback();
         });
     } else {
         $('#index').removeClass("d-none");
+		$('meta[name=description]').attr('content', "ngan thuan ngan ai muoi, tru tien, tru tien 2");
+
+storyname = json.storyname.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
+ 
+// Change Meta Keywords 
+$('meta[name=keywords]').attr('content',  "ngan thuan ngan ai muoi, tru tien, tru tien 2, tieu dinh,");
         callback();
     }
 }
