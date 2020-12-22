@@ -417,19 +417,25 @@ $('meta[name=keywords]').attr('content',  "ngan thuan ngan ai muoi, tru tien, tr
 }
 
 function load_ga() {
-    window.dataLayer = window.dataLayer || [];
+//     window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+//     function gtag() {
+//         dataLayer.push(arguments);
+//     }
+//     gtag('js', new Date());
 
-    gtag('config', 'UA-114911596-1');
+//     gtag('config', 'UA-114911596-1');
 }
 re_load(load_ga);
    </script>
   
    <script>
-      
+      <script data-cfasync="false">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114911596-1');
+</script>
    </script>
 </html>
