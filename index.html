@@ -1,440 +1,939 @@
 <!doctype html>
-<html>
-   <head>
-      <title>Truyện tổng hợp</title>
-      <meta charset="UTF-8">
-      <meta content="INDEX,FOLLOW" name="robots">
-      <meta name="resource-type" content="Document">
-      <meta name="revisit-after" content="1 days">
-      <meta name="GENERATOR" content="Phạm Duy Tùng">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="application-name" content="Phạm Duy Tùng Blog">
-	  <meta name="description" content="">
-	  <meta name="keywords" content="">
-<meta name="msapplication-tooltip" content="Site truyện tổng hợp của Phạm Duy Tùng">
-<meta name="author" content="Phạm Duy Tùng">
-      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="/news/css/bootstrap.min.css">
-      <style>
-         body {
-         background: #f7f7f7;
-         font-family: 'Roboto',sans-serif;
-         font-size: 13px;
-         line-height: 18px;
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
-         }
-         * {
-         margin: 0;
-         padding: 0;
-         border: none;
-         box-sizing: border-box;
-         color: inherit;
-         background: none;
-         -webkit-appearance: none;
-         -moz-appearance: none;
-         appearance: none;
-         }
-         div.img-news {
-         background-position: center;
-         background-size: cover;
-         display: block;
-         height: 100%;
-         margin: 0;
-         padding: 0;
-         width: 100%;
-         }
-         img.img-news {
-         display: block;
-         margin: 0;
-         padding: 0;
-         width: 100%;
-         max-height: 156px;
-         }
-         div.news-content{
-         color:black;
-         }
-         li.news-item{
-         border-bottom: 1px solid rgba(0,0,0,.125);
-         padding: 24px;
-         }
-         a,a:hover{
-         text-decoration: none;
-         color:white;
-         }
-		 
-		 a.storyname{
-		 color:green;
-		 }
-         .news-tittle{
-         font-size: 21px;
-         line-height: 27px;
-         font-weight: 700;
-         color:black;
-         }
-         .news-tittle:hover{
-         color:orange;
-         }
-         a.adv{
-         padding: 11px;
-         display: block;
-         }
-         div.adv{
-         background-color: #eee;
-         }
-         .nav-link{
-         color: #fff;
-         }
-         .nav-link:hover{
-         color: #ffb174;
-         }
-         svg.color-light{
-         fill:hsla(0,0%,100%,1);
-         }
-         .special-color-dark {
-         background-color: #263238!important;
-         }
-         .unique-color-dark {
-         background-color: #1c2331!important;
-         color:white;
-         }
-         footer.page-footer .footer-copyright {
-         overflow: hidden;
-         background-color: rgba(0,0,0,.2);
-         color: rgba(255,255,255,.6);
-         }
-         .news-times{
-         color:hsla(0,0%,67%,1);
-         }
-         .news-desc{
-         font-size:14px;
-         color:hsla(222,25%,20%,1);
-         line-height:1.7;
-         }
-         div.adv-sub{
-         padding-top:10px;
-         }
-         div.adv-sub img{
-         width: 100%;
-         }
-         div.adv-sub a{
-         margin-top:10px;
-         display:block;
-         }
-         div.advertisement{
-         text-align:center;
-         padding-top:10px; padding-bottom:10px;
-         }
-         div.advertisement img{
-         max-height: 512px; margin: auto; width: 100%;
-         background-position: center;
-         background-size: cover;
-         }
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="author" content="Phạm Duy Tùng">
+  <meta name="generator" content="Phạm Duy Tùng">
+  <meta name="application-name" content="Phạm Duy Tùng — Kho truyện">
+  <meta name="description" content="Kho truyện trực tuyến của Phạm Duy Tùng — đọc truyện miễn phí với giao diện hiện đại, dễ đọc trên mọi thiết bị.">
+  <meta name="keywords" content="đọc truyện, truyện online, Phạm Duy Tùng, Tru Tiên, Đấu La Đại Lục">
+  <meta name="theme-color" content="#f7f5ff">
+  <title>Kho truyện — Phạm Duy Tùng</title>
 
-         .btn-circle {
-        width: 60px;
-    height: 60px;
-    padding: 6px 0;
-    border-radius: 30px;
-    text-align: center;
-    font-size: 40px;
-    line-height: 0.9;
-    background-color: green;
-}
-      </style>
-   </head>
-   <body>
-     
-         <header id="header">
-		  <nav class="navbar navbar-expand-md navbar-dark" style="background: #790014; color: hsla(0,0%,100%,1);">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarNav"  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav">
-                  <li class="nav-item">
-                     <a class="nav-link" href="/" style="position:relative;">
-                        <svg class="color-light" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M11.143
-                              4.585L9.194 8.707l-4.361.663c-.782.118-1.096
-                              1.123-.529 1.7l3.156 3.205-.747
-                              4.53c-.134.818.693 1.432 1.386 1.049L12
-                              17.715l3.901 2.139c.693.38 1.52-.23
-                              1.386-1.05l-.747-4.529
-                              3.156-3.206c.567-.576.253-1.581-.529-1.7l-4.361-.662-1.95-4.122a.94.94
-                              0 0 0-1.713 0z"></path>
-                        </svg>
-                        <span style="position:relative; top:2px;">
-                        Home</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="/news" style="position:relative;">
-                        <svg class="color-light" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M11.143
-                              4.585L9.194 8.707l-4.361.663c-.782.118-1.096
-                              1.123-.529 1.7l3.156 3.205-.747
-                              4.53c-.134.818.693 1.432 1.386 1.049L12
-                              17.715l3.901 2.139c.693.38 1.52-.23
-                              1.386-1.05l-.747-4.529
-                              3.156-3.206c.567-.576.253-1.581-.529-1.7l-4.361-.662-1.95-4.122a.94.94
-                              0 0 0-1.713 0z"></path>
-                        </svg>
-                        <span style="position:relative; top:2px;">
-                        Tin tức </span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="/xem-truyen/" style="position:relative;">
-                        <svg class="color-light" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M11.143
-                              4.585L9.194 8.707l-4.361.663c-.782.118-1.096
-                              1.123-.529 1.7l3.156 3.205-.747
-                              4.53c-.134.818.693 1.432 1.386 1.049L12
-                              17.715l3.901 2.139c.693.38 1.52-.23
-                              1.386-1.05l-.747-4.529
-                              3.156-3.206c.567-.576.253-1.581-.529-1.7l-4.361-.662-1.95-4.122a.94.94
-                              0 0 0-1.713 0z"></path>
-                        </svg>
-                        <span style="position:relative; top:2px;">
-                        Truyện </span>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-</nav>        
-		</header>
-      <main class="container" role="main">
-         <div style="font-size: 28px; font-family: palatino linotype,arial,times new roman,sans-serif; line-height: 1.7;">
-            <div id="chapter" class="d-none">
-               <div style="text-align: center;padding: 10px 0; color: green; font-size: 36px; font-weight: bold;">
-			   <a href="#"  class="storyname"></a>
-               </div>
-               <div class="chaptername" style="text-align: center;padding-bottom: 10px; font-size: 30px; font-weight: bold;">
-               </div>
-               <div class="row">
-               <div style='height:19px'></div>
-    <div style="margin: 0 auto;">
-    <a href="#" class="prev btn-circle btn">‹</a>
-<a href="#" class="next btn-circle btn">›</a>
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4644989745435991"
+    crossorigin="anonymous">
+  </script>
+
+  <style>
+    :root {
+      --ink: #20213b;
+      --muted: #747694;
+      --primary: #7a63e4;
+      --primary-dark: #5f4bc2;
+      --cyan: #52d8e2;
+      --pink: #f39bc8;
+      --surface: rgba(255, 255, 255, .74);
+      --line: rgba(109, 92, 184, .12);
+      --shadow: 0 22px 70px rgba(70, 55, 135, .11);
+      --shadow-soft: 0 12px 36px rgba(70, 55, 135, .08);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --container: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(82,216,226,.16), transparent 28rem),
+        radial-gradient(circle at 88% 18%, rgba(243,155,200,.16), transparent 25rem),
+        radial-gradient(circle at 48% 70%, rgba(122,99,228,.1), transparent 34rem),
+        #f7f5ff;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before, body::after {
+      position: fixed;
+      z-index: -1;
+      width: 18rem;
+      height: 18rem;
+      border-radius: 50%;
+      content: "";
+      filter: blur(10px);
+      opacity: .38;
+      pointer-events: none;
+    }
+    body::before {
+      top: 12rem; right: -8rem;
+      background: linear-gradient(135deg, var(--cyan), var(--primary));
+    }
+    body::after {
+      bottom: 5rem; left: -10rem;
+      background: linear-gradient(135deg, var(--pink), #fff0bd);
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin-top: 0; }
+    .shell { width: min(calc(100% - 40px), var(--container)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 50; top: 12px; padding-top: 12px; }
+    .nav-shell {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 10px 14px 10px 12px;
+      border: 1px solid rgba(255,255,255,.86);
+      border-radius: 20px;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 14px 44px rgba(67,56,120,.09);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .brand { display: inline-flex; min-width: max-content; align-items: center; gap: 11px; }
+    .brand-mark {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--cyan));
+      box-shadow: 0 10px 25px rgba(122,99,228,.28);
+    }
+    .brand-mark svg { width: 23px; height: 23px; }
+    .brand-copy { display: grid; line-height: 1.1; }
+    .brand-copy strong { font-size: 14px; letter-spacing: -.02em; }
+    .brand-copy small {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 750;
+      letter-spacing: .17em;
+    }
+    .main-nav { display: flex; align-items: center; justify-content: flex-end; gap: 4px; }
+    .main-nav a {
+      padding: 10px 13px;
+      border-radius: 12px;
+      color: #555873;
+      font-size: 13px;
+      font-weight: 650;
+      transition: 180ms ease;
+    }
+    .main-nav a:hover, .main-nav a[aria-current="page"] {
+      color: var(--primary-dark);
+      background: rgba(122,99,228,.1);
+    }
+    main { min-height: calc(100vh - 300px); padding: 72px 0 80px; }
+    .view[hidden] { display: none !important; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 20px; height: 1px; background: currentColor; content: ""; }
+    .hero {
+      position: relative;
+      display: grid;
+      min-height: 440px;
+      grid-template-columns: minmax(0,1.2fr) minmax(290px,.8fr);
+      align-items: center;
+      gap: 54px;
+      overflow: hidden;
+      padding: clamp(36px,6vw,72px);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.84), rgba(255,255,255,.5)),
+        linear-gradient(135deg, rgba(82,216,226,.14), rgba(243,155,200,.16));
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      position: absolute;
+      right: -80px;
+      bottom: -110px;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(122,99,228,.12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 34px rgba(82,216,226,.05), 0 0 0 68px rgba(243,155,200,.04);
+      content: "";
+    }
+    .hero-copy, .hero-art { position: relative; z-index: 1; }
+    .hero h1 {
+      max-width: 700px;
+      margin-bottom: 20px;
+      font-size: clamp(42px,6vw,72px);
+      line-height: .98;
+      letter-spacing: -.065em;
+    }
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(90deg,#53cbd6 5%,#7860df 55%,#dd84b7);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .hero-copy > p { max-width: 610px; margin-bottom: 26px; color: #5d607f; font-size: 17px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border: 0;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary {
+      color: #fff;
+      background: linear-gradient(135deg,var(--primary),#8e72ee);
+      box-shadow: 0 12px 26px rgba(122,99,228,.25);
+    }
+    .button-soft {
+      color: var(--primary-dark);
+      background: rgba(255,255,255,.72);
+      box-shadow: inset 0 0 0 1px rgba(122,99,228,.12);
+    }
+    .hero-art { min-height: 280px; }
+    .book-stack { position: absolute; inset: 0; display: grid; place-items: center; }
+    .book-card {
+      position: absolute;
+      display: grid;
+      width: min(230px,70%);
+      aspect-ratio: .76;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 25px;
+      color: #fff;
+      box-shadow: 0 26px 60px rgba(62,48,126,.22);
+    }
+    .book-card::before {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 28% 25%,rgba(255,255,255,.82),transparent 22%),
+        linear-gradient(145deg,rgba(82,216,226,.9),rgba(122,99,228,.87) 52%,rgba(243,155,200,.9));
+      content: "";
+    }
+    .book-card svg { position: relative; width: 84px; filter: drop-shadow(0 10px 20px rgba(72,46,137,.2)); }
+    .book-back { transform: translate(-58px,8px) rotate(-12deg); opacity: .58; }
+    .book-front { transform: translate(42px,-10px) rotate(7deg); }
+    .sparkle {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 10px 30px rgba(122,99,228,.2);
+      transform: rotate(22deg);
+    }
+    .sparkle-one { top: 6%; right: 4%; }
+    .sparkle-two { bottom: 4%; left: 2%; width: 18px; height: 18px; background: rgba(82,216,226,.72); }
+    .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 16px 0 68px; }
+    .stat {
+      padding: 18px 22px;
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 18px;
+      background: rgba(255,255,255,.66);
+      box-shadow: var(--shadow-soft);
+    }
+    .stat strong { display: block; color: var(--primary-dark); font-size: 22px; letter-spacing: -.04em; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .section-heading h2 { margin-bottom: 4px; font-size: clamp(30px,4vw,46px); line-height: 1.08; letter-spacing: -.045em; }
+    .section-heading p { max-width: 520px; margin-bottom: 0; color: var(--muted); }
+    .story-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .story-card {
+      display: grid;
+      min-height: 265px;
+      grid-template-columns: 38% 1fr;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.94);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+    .story-card:hover { transform: translateY(-5px); box-shadow: 0 24px 55px rgba(70,55,135,.15); }
+    .story-cover {
+      position: relative;
+      min-height: 265px;
+      overflow: hidden;
+      background: linear-gradient(145deg,#d4f7f7,#ded4ff 55%,#f8cee2);
+    }
+    .story-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms ease; }
+    .story-card:hover .story-cover img { transform: scale(1.04); }
+    .story-cover::after { position: absolute; inset: 0; background: linear-gradient(to top,rgba(50,40,103,.22),transparent 50%); content: ""; }
+    .story-info {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: clamp(22px,3vw,34px);
+    }
+    .pill {
+      display: inline-flex;
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: rgba(122,99,228,.1);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .story-info h3 { margin: 12px 0 8px; font-size: clamp(20px,2.3vw,27px); line-height: 1.13; letter-spacing: -.035em; }
+    .story-info p {
+      display: -webkit-box;
+      margin-bottom: 18px;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 13px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .text-link { margin-top: auto; color: var(--primary-dark); font-size: 12px; font-weight: 800; }
+    .loading-card {
+      min-height: 265px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(100deg,rgba(255,255,255,.45) 25%,rgba(255,255,255,.85) 45%,rgba(255,255,255,.45) 65%);
+      background-size: 250% 100%;
+      animation: shimmer 1.35s infinite linear;
+    }
+    @keyframes shimmer { to { background-position: -250% 0; } }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .back-link:hover { color: var(--primary-dark); }
+    .story-hero {
+      display: grid;
+      grid-template-columns: minmax(220px,300px) minmax(0,1fr);
+      gap: clamp(28px,5vw,64px);
+      padding: clamp(24px,5vw,52px);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .story-poster {
+      overflow: hidden;
+      aspect-ratio: .78;
+      border-radius: 22px;
+      background: linear-gradient(145deg,#d4f7f7,#ded4ff,#f8cee2);
+      box-shadow: 0 24px 55px rgba(70,55,135,.2);
+    }
+    .story-poster img { width: 100%; height: 100%; object-fit: cover; }
+    .story-detail { align-self: center; }
+    .story-detail h1 { margin: 15px 0; font-size: clamp(36px,5vw,62px); line-height: 1; letter-spacing: -.055em; }
+    .author-line { margin-bottom: 22px; color: var(--primary-dark); font-size: 13px; font-weight: 750; }
+    .story-summary { max-width: 690px; color: #555873; font-size: 15px; }
+    .story-summary p:last-child { margin-bottom: 0; }
+    .chapter-section { margin-top: 54px; }
+    .chapter-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+    .chapter-toolbar h2 { margin: 0; font-size: clamp(28px,4vw,40px); letter-spacing: -.045em; }
+    .search-wrap { position: relative; width: min(100%,330px); }
+    .search-wrap svg {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      width: 17px;
+      color: var(--muted);
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .chapter-search {
+      width: 100%;
+      height: 46px;
+      padding: 0 15px 0 43px;
+      border: 1px solid rgba(122,99,228,.12);
+      border-radius: 14px;
+      outline: none;
+      color: var(--ink);
+      background: rgba(255,255,255,.76);
+    }
+    .chapter-search:focus { border-color: rgba(122,99,228,.4); box-shadow: 0 0 0 4px rgba(122,99,228,.08); }
+    .chapter-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .chapter-list a {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 15px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 15px;
+      background: rgba(255,255,255,.68);
+      box-shadow: 0 7px 20px rgba(70,55,135,.05);
+      font-size: 13px;
+      font-weight: 650;
+      transition: 180ms ease;
+    }
+    .chapter-list a:hover {
+      color: var(--primary-dark);
+      border-color: rgba(122,99,228,.2);
+      background: rgba(255,255,255,.92);
+      transform: translateY(-2px);
+    }
+    .chapter-number {
+      display: grid;
+      min-width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 10px;
+      color: var(--primary-dark);
+      background: rgba(122,99,228,.1);
+      font-size: 10px;
+      font-weight: 800;
+    }
+    .empty-search {
+      grid-column: 1/-1;
+      padding: 30px;
+      border-radius: 18px;
+      color: var(--muted);
+      background: rgba(255,255,255,.65);
+      text-align: center;
+    }
+    .reader-shell { width: min(calc(100% - 40px),920px); margin-inline: auto; }
+    .reader-header { margin-bottom: 26px; text-align: center; }
+    .reader-story {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .reader-header h1 {
+      margin-bottom: 0;
+      font-family: Georgia,"Times New Roman",serif;
+      font-size: clamp(30px,5vw,48px);
+      line-height: 1.16;
+      letter-spacing: -.035em;
+    }
+    .reader-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 17px;
+      background: rgba(255,255,255,.65);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(14px);
+    }
+    .reader-tools > span { padding-left: 7px; color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .tool-buttons { display: flex; gap: 6px; }
+    .tool-button {
+      display: grid;
+      min-width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 0;
+      border-radius: 11px;
+      color: var(--primary-dark);
+      background: rgba(122,99,228,.09);
+      cursor: pointer;
+      font-weight: 800;
+    }
+    .tool-button:hover { background: rgba(122,99,228,.15); }
+    .chapter-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin: 16px 0; }
+    .chapter-nav .button:first-child { justify-self: start; }
+    .chapter-nav .button:last-child { justify-self: end; }
+    .chapter-nav .disabled { visibility: hidden; pointer-events: none; }
+    .chapter-home { color: var(--muted); font-size: 12px; font-weight: 750; }
+    .reader-card {
+      padding: clamp(28px,6vw,68px);
+      border: 1px solid rgba(255,255,255,.96);
+      border-radius: var(--radius-xl);
+      color: #292b42;
+      background: rgba(255,255,255,.84);
+      box-shadow: var(--shadow);
+      font-family: Georgia,"Times New Roman",serif;
+      font-size: var(--reader-size,20px);
+      line-height: 1.9;
+    }
+    .reader-card p { margin-bottom: 1.35em; }
+    body.focus-mode { background: #efece3; }
+    body.focus-mode::before, body.focus-mode::after { display: none; }
+    body.focus-mode .reader-card {
+      border-color: rgba(83,68,40,.08);
+      color: #2f2b23;
+      background: #fbf8ef;
+      box-shadow: 0 20px 60px rgba(73,62,43,.1);
+    }
+    .notice {
+      padding: 42px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+    }
+    .notice h2 { margin-bottom: 8px; font-size: 28px; }
+    .notice p { color: var(--muted); }
+    .site-footer { padding: 0 0 30px; }
+    .footer-card {
+      display: grid;
+      grid-template-columns: 1.3fr repeat(3,1fr);
+      gap: 32px;
+      padding: 38px;
+      border: 1px solid rgba(255,255,255,.86);
+      border-radius: 24px;
+      background: rgba(255,255,255,.56);
+      box-shadow: var(--shadow-soft);
+    }
+    .footer-intro p { max-width: 390px; margin: 14px 0 0; color: var(--muted); font-size: 12px; }
+    .footer-column strong { display: block; margin-bottom: 11px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .footer-column a { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .footer-column a:hover { color: var(--primary-dark); }
+    .copyright { margin: 18px 0 0; color: #8a8ba3; font-size: 11px; text-align: center; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { min-height: 250px; }
+      .story-grid { grid-template-columns: 1fr; }
+      .footer-card { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      .shell, .reader-shell { width: min(calc(100% - 24px),var(--container)); }
+      .site-header { top: 6px; padding-top: 6px; }
+      .nav-shell { min-height: 60px; padding: 8px; }
+      .brand-copy small, .main-nav a:not([aria-current="page"]) { display: none; }
+      .main-nav a { padding: 9px 11px; }
+      main { padding: 42px 0 58px; }
+      .hero { min-height: auto; gap: 24px; padding: 34px 25px; border-radius: 24px; }
+      .hero h1 { font-size: clamp(42px,13vw,58px); }
+      .hero-art { min-height: 230px; }
+      .book-card { width: 150px; }
+      .stats { grid-template-columns: 1fr; margin-bottom: 48px; }
+      .section-heading, .chapter-toolbar { align-items: flex-start; flex-direction: column; }
+      .story-card { grid-template-columns: 120px 1fr; min-height: 210px; }
+      .story-cover { min-height: 210px; }
+      .story-info { padding: 20px; }
+      .story-hero { grid-template-columns: 1fr; padding: 20px; }
+      .story-poster { width: min(100%,300px); margin-inline: auto; }
+      .chapter-list { grid-template-columns: 1fr; }
+      .search-wrap { width: 100%; }
+      .reader-tools > span, .chapter-home { display: none; }
+      .reader-tools { justify-content: flex-end; }
+      .chapter-nav { grid-template-columns: 1fr 1fr; }
+      .reader-card { padding: 28px 22px; border-radius: 22px; font-size: var(--reader-size-mobile,18px); line-height: 1.85; }
+      .footer-card { grid-template-columns: 1fr; padding: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="https://www.phamduytung.com/" aria-label="Phạm Duy Tùng — Trang chủ">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 5.7A2.7 2.7 0 0 1 6.7 3H11a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H4z"/>
+            <path d="M20 5.7A2.7 2.7 0 0 0 17.3 3H14v18a3 3 0 0 1 3-3h3z"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>Phạm Duy Tùng</strong>
+          <small>STORIES · KNOWLEDGE</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="https://www.phamduytung.com/">Trang chủ</a>
+        <a href="https://www.phamduytung.com/news/">Bài viết</a>
+        <a href="./" aria-current="page">Kho truyện</a>
+      </nav>
     </div>
-    <div style='height:96px'></div></div>
-               <div class="content">
-               </div>
-               
-               <div class="row">
-               <div style='height:19px'></div>
-    <div style="margin: 0 auto;">
-    <a href="#" class="prev btn-circle btn">‹</a>
-<a href="#" class="next btn-circle btn">›</a>
-    </div>
-    <div style='height:96px'></div>
-    </div>
-            </div>
-               <div id="story" class="row d-none" style="margin-top:10px;">
-                  <div class="col-md-9">
-                     <div class="row">
-                        <div class='col-md-4'>
-                           <img src='' class='img' style='width:100%'/>
-                           <div class="author" style="font-size:15px; padding-top:15px;"></div>
-                        </div>
-                        <div class='col-md-8'>
-                           <div class='storyname' style="text-align: center;padding-bottom: 10px; color: green; font-size: 30px; font-weight: bold;"></div>
-                           <hr/>
-                           <div class='shortcontent' style="font-size: 22px; text-align: justify;"></div>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <h2>
-                        DANH SÁCH CHƯƠNG
-                     </div>
-                     <hr>
-                     <ul class='chapter list-unstyled card-columns row'></ul>
-                  </div>
-                  <div class='col-md-3'></div>
-                </div>
-                 
-               
-           
-               <div id="index" class="d-none"  style="margin-top:10px;">
-                <ul class='chapter list-unstyled card-columns row' >
-                <li class='col-md-12 list-group-item' style='font-size:16px'><a style='color:#333' href='?type=story&story=1&name=tru-tien' >
-                        <i class="fa fa-spinner fa-spin" style="font-size:13px"></i> 
-                    TRU TIÊN</a></li>
-                <li class='col-md-12 list-group-item' style='font-size:16px'><a style='color:#333' href='?type=story&story=9033&name=tru-tien-2' >
-                        <i class="fa fa-spinner fa-spin" style="font-size:13px"></i> 
-                    TRU TIÊN II</a></li>
-                   <li class='col-md-12 list-group-item' style='font-size:16px'><a style='color:#333' href='?type=story&story=9035&name=ngan-thuan-ngan-ai-muoi' >
-                        <i class="fa fa-spinner fa-spin" style="font-size:13px"></i> 
-                    NGẬN THUẦN NGẬN ÁI MUỘI</a></li>
-                    <li class='col-md-12 list-group-item' style='font-size:16px'><a style='color:#333' href='?type=story&story=9277&name=dau-la-dai-luc' >
-                        <i class="fa fa-spinner fa-spin" style="font-size:13px"></i> 
-                        ĐẤU LA ĐẠI LỤC</a></li>
-                    
-                </ul>
-             </div>
+  </header>
+
+  <main>
+    <section id="index-view" class="view shell" hidden>
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Thư viện truyện</span>
+          <h1>Đọc chậm.<br><span class="gradient-text">Mơ thật xa.</span></h1>
+          <p>Một góc nhỏ dành cho những thế giới lớn — chọn câu chuyện bạn yêu thích và tiếp tục hành trình ở bất cứ đâu.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#thu-vien">Khám phá thư viện <span aria-hidden="true">→</span></a>
+            <a class="button button-soft" href="https://www.phamduytung.com/">Về trang chính</a>
           </div>
-      </main>
-   </body>
-   <script src="/news/js/jquery-3.3.1.min.js"  data-cfasync="false"></script>
-   <script src="/news/js/bootstrap.min.js"  data-cfasync="false"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114911596-1"></script>
-   <script type="text/javascript">
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="book-stack">
+            <div class="book-card book-back"></div>
+            <div class="book-card book-front">
+              <svg viewBox="0 0 100 100" fill="none">
+                <path d="M19 27c0-6.6 5.4-12 12-12h15c8.8 0 16 7.2 16 16v54c0-8.8-7.2-16-16-16H19V27Z" fill="rgba(255,255,255,.88)"/>
+                <path d="M81 27c0-6.6-5.4-12-12-12h-7v70c0-8.8 7.2-16 16-16h3V27Z" fill="rgba(255,255,255,.62)"/>
+                <path d="M32 36h18M32 45h14" stroke="#7962df" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <i class="sparkle sparkle-one"></i>
+            <i class="sparkle sparkle-two"></i>
+          </div>
+        </div>
+      </div>
 
-   var Latinise={};Latinise.latin_map={"Á":"A","Ă":"A","Ắ":"A","Ặ":"A","Ằ":"A","Ẳ":"A","Ẵ":"A","Ǎ":"A","Â":"A","Ấ":"A","Ậ":"A","Ầ":"A","Ẩ":"A","Ẫ":"A","Ä":"A","Ǟ":"A","Ȧ":"A","Ǡ":"A","Ạ":"A","Ȁ":"A","À":"A","Ả":"A","Ȃ":"A","Ā":"A","Ą":"A","Å":"A","Ǻ":"A","Ḁ":"A","Ⱥ":"A","Ã":"A","Ꜳ":"AA","Æ":"AE","Ǽ":"AE","Ǣ":"AE","Ꜵ":"AO","Ꜷ":"AU","Ꜹ":"AV","Ꜻ":"AV","Ꜽ":"AY","Ḃ":"B","Ḅ":"B","Ɓ":"B","Ḇ":"B","Ƀ":"B","Ƃ":"B","Ć":"C","Č":"C","Ç":"C","Ḉ":"C","Ĉ":"C","Ċ":"C","Ƈ":"C","Ȼ":"C","Ď":"D","Ḑ":"D","Ḓ":"D","Ḋ":"D","Ḍ":"D","Ɗ":"D","Ḏ":"D","ǲ":"D","ǅ":"D","Đ":"D","Ƌ":"D","Ǳ":"DZ","Ǆ":"DZ","É":"E","Ĕ":"E","Ě":"E","Ȩ":"E","Ḝ":"E","Ê":"E","Ế":"E","Ệ":"E","Ề":"E","Ể":"E","Ễ":"E","Ḙ":"E","Ë":"E","Ė":"E","Ẹ":"E","Ȅ":"E","È":"E","Ẻ":"E","Ȇ":"E","Ē":"E","Ḗ":"E","Ḕ":"E","Ę":"E","Ɇ":"E","Ẽ":"E","Ḛ":"E","Ꝫ":"ET","Ḟ":"F","Ƒ":"F","Ǵ":"G","Ğ":"G","Ǧ":"G","Ģ":"G","Ĝ":"G","Ġ":"G","Ɠ":"G","Ḡ":"G","Ǥ":"G","Ḫ":"H","Ȟ":"H","Ḩ":"H","Ĥ":"H","Ⱨ":"H","Ḧ":"H","Ḣ":"H","Ḥ":"H","Ħ":"H","Í":"I","Ĭ":"I","Ǐ":"I","Î":"I","Ï":"I","Ḯ":"I","İ":"I","Ị":"I","Ȉ":"I","Ì":"I","Ỉ":"I","Ȋ":"I","Ī":"I","Į":"I","Ɨ":"I","Ĩ":"I","Ḭ":"I","Ꝺ":"D","Ꝼ":"F","Ᵹ":"G","Ꞃ":"R","Ꞅ":"S","Ꞇ":"T","Ꝭ":"IS","Ĵ":"J","Ɉ":"J","Ḱ":"K","Ǩ":"K","Ķ":"K","Ⱪ":"K","Ꝃ":"K","Ḳ":"K","Ƙ":"K","Ḵ":"K","Ꝁ":"K","Ꝅ":"K","Ĺ":"L","Ƚ":"L","Ľ":"L","Ļ":"L","Ḽ":"L","Ḷ":"L","Ḹ":"L","Ⱡ":"L","Ꝉ":"L","Ḻ":"L","Ŀ":"L","Ɫ":"L","ǈ":"L","Ł":"L","Ǉ":"LJ","Ḿ":"M","Ṁ":"M","Ṃ":"M","Ɱ":"M","Ń":"N","Ň":"N","Ņ":"N","Ṋ":"N","Ṅ":"N","Ṇ":"N","Ǹ":"N","Ɲ":"N","Ṉ":"N","Ƞ":"N","ǋ":"N","Ñ":"N","Ǌ":"NJ","Ó":"O","Ŏ":"O","Ǒ":"O","Ô":"O","Ố":"O","Ộ":"O","Ồ":"O","Ổ":"O","Ỗ":"O","Ö":"O","Ȫ":"O","Ȯ":"O","Ȱ":"O","Ọ":"O","Ő":"O","Ȍ":"O","Ò":"O","Ỏ":"O","Ơ":"O","Ớ":"O","Ợ":"O","Ờ":"O","Ở":"O","Ỡ":"O","Ȏ":"O","Ꝋ":"O","Ꝍ":"O","Ō":"O","Ṓ":"O","Ṑ":"O","Ɵ":"O","Ǫ":"O","Ǭ":"O","Ø":"O","Ǿ":"O","Õ":"O","Ṍ":"O","Ṏ":"O","Ȭ":"O","Ƣ":"OI","Ꝏ":"OO","Ɛ":"E","Ɔ":"O","Ȣ":"OU","Ṕ":"P","Ṗ":"P","Ꝓ":"P","Ƥ":"P","Ꝕ":"P","Ᵽ":"P","Ꝑ":"P","Ꝙ":"Q","Ꝗ":"Q","Ŕ":"R","Ř":"R","Ŗ":"R","Ṙ":"R","Ṛ":"R","Ṝ":"R","Ȑ":"R","Ȓ":"R","Ṟ":"R","Ɍ":"R","Ɽ":"R","Ꜿ":"C","Ǝ":"E","Ś":"S","Ṥ":"S","Š":"S","Ṧ":"S","Ş":"S","Ŝ":"S","Ș":"S","Ṡ":"S","Ṣ":"S","Ṩ":"S","Ť":"T","Ţ":"T","Ṱ":"T","Ț":"T","Ⱦ":"T","Ṫ":"T","Ṭ":"T","Ƭ":"T","Ṯ":"T","Ʈ":"T","Ŧ":"T","Ɐ":"A","Ꞁ":"L","Ɯ":"M","Ʌ":"V","Ꜩ":"TZ","Ú":"U","Ŭ":"U","Ǔ":"U","Û":"U","Ṷ":"U","Ü":"U","Ǘ":"U","Ǚ":"U","Ǜ":"U","Ǖ":"U","Ṳ":"U","Ụ":"U","Ű":"U","Ȕ":"U","Ù":"U","Ủ":"U","Ư":"U","Ứ":"U","Ự":"U","Ừ":"U","Ử":"U","Ữ":"U","Ȗ":"U","Ū":"U","Ṻ":"U","Ų":"U","Ů":"U","Ũ":"U","Ṹ":"U","Ṵ":"U","Ꝟ":"V","Ṿ":"V","Ʋ":"V","Ṽ":"V","Ꝡ":"VY","Ẃ":"W","Ŵ":"W","Ẅ":"W","Ẇ":"W","Ẉ":"W","Ẁ":"W","Ⱳ":"W","Ẍ":"X","Ẋ":"X","Ý":"Y","Ŷ":"Y","Ÿ":"Y","Ẏ":"Y","Ỵ":"Y","Ỳ":"Y","Ƴ":"Y","Ỷ":"Y","Ỿ":"Y","Ȳ":"Y","Ɏ":"Y","Ỹ":"Y","Ź":"Z","Ž":"Z","Ẑ":"Z","Ⱬ":"Z","Ż":"Z","Ẓ":"Z","Ȥ":"Z","Ẕ":"Z","Ƶ":"Z","Ĳ":"IJ","Œ":"OE","ᴀ":"A","ᴁ":"AE","ʙ":"B","ᴃ":"B","ᴄ":"C","ᴅ":"D","ᴇ":"E","ꜰ":"F","ɢ":"G","ʛ":"G","ʜ":"H","ɪ":"I","ʁ":"R","ᴊ":"J","ᴋ":"K","ʟ":"L","ᴌ":"L","ᴍ":"M","ɴ":"N","ᴏ":"O","ɶ":"OE","ᴐ":"O","ᴕ":"OU","ᴘ":"P","ʀ":"R","ᴎ":"N","ᴙ":"R","ꜱ":"S","ᴛ":"T","ⱻ":"E","ᴚ":"R","ᴜ":"U","ᴠ":"V","ᴡ":"W","ʏ":"Y","ᴢ":"Z","á":"a","ă":"a","ắ":"a","ặ":"a","ằ":"a","ẳ":"a","ẵ":"a","ǎ":"a","â":"a","ấ":"a","ậ":"a","ầ":"a","ẩ":"a","ẫ":"a","ä":"a","ǟ":"a","ȧ":"a","ǡ":"a","ạ":"a","ȁ":"a","à":"a","ả":"a","ȃ":"a","ā":"a","ą":"a","ᶏ":"a","ẚ":"a","å":"a","ǻ":"a","ḁ":"a","ⱥ":"a","ã":"a","ꜳ":"aa","æ":"ae","ǽ":"ae","ǣ":"ae","ꜵ":"ao","ꜷ":"au","ꜹ":"av","ꜻ":"av","ꜽ":"ay","ḃ":"b","ḅ":"b","ɓ":"b","ḇ":"b","ᵬ":"b","ᶀ":"b","ƀ":"b","ƃ":"b","ɵ":"o","ć":"c","č":"c","ç":"c","ḉ":"c","ĉ":"c","ɕ":"c","ċ":"c","ƈ":"c","ȼ":"c","ď":"d","ḑ":"d","ḓ":"d","ȡ":"d","ḋ":"d","ḍ":"d","ɗ":"d","ᶑ":"d","ḏ":"d","ᵭ":"d","ᶁ":"d","đ":"d","ɖ":"d","ƌ":"d","ı":"i","ȷ":"j","ɟ":"j","ʄ":"j","ǳ":"dz","ǆ":"dz","é":"e","ĕ":"e","ě":"e","ȩ":"e","ḝ":"e","ê":"e","ế":"e","ệ":"e","ề":"e","ể":"e","ễ":"e","ḙ":"e","ë":"e","ė":"e","ẹ":"e","ȅ":"e","è":"e","ẻ":"e","ȇ":"e","ē":"e","ḗ":"e","ḕ":"e","ⱸ":"e","ę":"e","ᶒ":"e","ɇ":"e","ẽ":"e","ḛ":"e","ꝫ":"et","ḟ":"f","ƒ":"f","ᵮ":"f","ᶂ":"f","ǵ":"g","ğ":"g","ǧ":"g","ģ":"g","ĝ":"g","ġ":"g","ɠ":"g","ḡ":"g","ᶃ":"g","ǥ":"g","ḫ":"h","ȟ":"h","ḩ":"h","ĥ":"h","ⱨ":"h","ḧ":"h","ḣ":"h","ḥ":"h","ɦ":"h","ẖ":"h","ħ":"h","ƕ":"hv","í":"i","ĭ":"i","ǐ":"i","î":"i","ï":"i","ḯ":"i","ị":"i","ȉ":"i","ì":"i","ỉ":"i","ȋ":"i","ī":"i","į":"i","ᶖ":"i","ɨ":"i","ĩ":"i","ḭ":"i","ꝺ":"d","ꝼ":"f","ᵹ":"g","ꞃ":"r","ꞅ":"s","ꞇ":"t","ꝭ":"is","ǰ":"j","ĵ":"j","ʝ":"j","ɉ":"j","ḱ":"k","ǩ":"k","ķ":"k","ⱪ":"k","ꝃ":"k","ḳ":"k","ƙ":"k","ḵ":"k","ᶄ":"k","ꝁ":"k","ꝅ":"k","ĺ":"l","ƚ":"l","ɬ":"l","ľ":"l","ļ":"l","ḽ":"l","ȴ":"l","ḷ":"l","ḹ":"l","ⱡ":"l","ꝉ":"l","ḻ":"l","ŀ":"l","ɫ":"l","ᶅ":"l","ɭ":"l","ł":"l","ǉ":"lj","ſ":"s","ẜ":"s","ẛ":"s","ẝ":"s","ḿ":"m","ṁ":"m","ṃ":"m","ɱ":"m","ᵯ":"m","ᶆ":"m","ń":"n","ň":"n","ņ":"n","ṋ":"n","ȵ":"n","ṅ":"n","ṇ":"n","ǹ":"n","ɲ":"n","ṉ":"n","ƞ":"n","ᵰ":"n","ᶇ":"n","ɳ":"n","ñ":"n","ǌ":"nj","ó":"o","ŏ":"o","ǒ":"o","ô":"o","ố":"o","ộ":"o","ồ":"o","ổ":"o","ỗ":"o","ö":"o","ȫ":"o","ȯ":"o","ȱ":"o","ọ":"o","ő":"o","ȍ":"o","ò":"o","ỏ":"o","ơ":"o","ớ":"o","ợ":"o","ờ":"o","ở":"o","ỡ":"o","ȏ":"o","ꝋ":"o","ꝍ":"o","ⱺ":"o","ō":"o","ṓ":"o","ṑ":"o","ǫ":"o","ǭ":"o","ø":"o","ǿ":"o","õ":"o","ṍ":"o","ṏ":"o","ȭ":"o","ƣ":"oi","ꝏ":"oo","ɛ":"e","ᶓ":"e","ɔ":"o","ᶗ":"o","ȣ":"ou","ṕ":"p","ṗ":"p","ꝓ":"p","ƥ":"p","ᵱ":"p","ᶈ":"p","ꝕ":"p","ᵽ":"p","ꝑ":"p","ꝙ":"q","ʠ":"q","ɋ":"q","ꝗ":"q","ŕ":"r","ř":"r","ŗ":"r","ṙ":"r","ṛ":"r","ṝ":"r","ȑ":"r","ɾ":"r","ᵳ":"r","ȓ":"r","ṟ":"r","ɼ":"r","ᵲ":"r","ᶉ":"r","ɍ":"r","ɽ":"r","ↄ":"c","ꜿ":"c","ɘ":"e","ɿ":"r","ś":"s","ṥ":"s","š":"s","ṧ":"s","ş":"s","ŝ":"s","ș":"s","ṡ":"s","ṣ":"s","ṩ":"s","ʂ":"s","ᵴ":"s","ᶊ":"s","ȿ":"s","ɡ":"g","ᴑ":"o","ᴓ":"o","ᴝ":"u","ť":"t","ţ":"t","ṱ":"t","ț":"t","ȶ":"t","ẗ":"t","ⱦ":"t","ṫ":"t","ṭ":"t","ƭ":"t","ṯ":"t","ᵵ":"t","ƫ":"t","ʈ":"t","ŧ":"t","ᵺ":"th","ɐ":"a","ᴂ":"ae","ǝ":"e","ᵷ":"g","ɥ":"h","ʮ":"h","ʯ":"h","ᴉ":"i","ʞ":"k","ꞁ":"l","ɯ":"m","ɰ":"m","ᴔ":"oe","ɹ":"r","ɻ":"r","ɺ":"r","ⱹ":"r","ʇ":"t","ʌ":"v","ʍ":"w","ʎ":"y","ꜩ":"tz","ú":"u","ŭ":"u","ǔ":"u","û":"u","ṷ":"u","ü":"u","ǘ":"u","ǚ":"u","ǜ":"u","ǖ":"u","ṳ":"u","ụ":"u","ű":"u","ȕ":"u","ù":"u","ủ":"u","ư":"u","ứ":"u","ự":"u","ừ":"u","ử":"u","ữ":"u","ȗ":"u","ū":"u","ṻ":"u","ų":"u","ᶙ":"u","ů":"u","ũ":"u","ṹ":"u","ṵ":"u","ᵫ":"ue","ꝸ":"um","ⱴ":"v","ꝟ":"v","ṿ":"v","ʋ":"v","ᶌ":"v","ⱱ":"v","ṽ":"v","ꝡ":"vy","ẃ":"w","ŵ":"w","ẅ":"w","ẇ":"w","ẉ":"w","ẁ":"w","ⱳ":"w","ẘ":"w","ẍ":"x","ẋ":"x","ᶍ":"x","ý":"y","ŷ":"y","ÿ":"y","ẏ":"y","ỵ":"y","ỳ":"y","ƴ":"y","ỷ":"y","ỿ":"y","ȳ":"y","ẙ":"y","ɏ":"y","ỹ":"y","ź":"z","ž":"z","ẑ":"z","ʑ":"z","ⱬ":"z","ż":"z","ẓ":"z","ȥ":"z","ẕ":"z","ᵶ":"z","ᶎ":"z","ʐ":"z","ƶ":"z","ɀ":"z","ﬀ":"ff","ﬃ":"ffi","ﬄ":"ffl","ﬁ":"fi","ﬂ":"fl","ĳ":"ij","œ":"oe","ﬆ":"st","ₐ":"a","ₑ":"e","ᵢ":"i","ⱼ":"j","ₒ":"o","ᵣ":"r","ᵤ":"u","ᵥ":"v","ₓ":"x"};
-String.prototype.latinise=function(){return this.replace(/[^A-Za-z0-9\[\] ]/g,function(a){return Latinise.latin_map[a]||a})};
-String.prototype.latinize=String.prototype.latinise;
-String.prototype.isLatin=function(){return this==this.latinise()}
+      <div class="stats" aria-label="Thông tin thư viện">
+        <div class="stat"><strong>4</strong><span>Bộ truyện chọn lọc</span></div>
+        <div class="stat"><strong>Miễn phí</strong><span>Đọc trọn vẹn trực tuyến</span></div>
+        <div class="stat"><strong>∞</strong><span>Không gian cho trí tưởng tượng</span></div>
+      </div>
 
-function re_load(callback) {
+      <section id="thu-vien">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Story library</span>
+            <h2>Chọn một thế giới</h2>
+          </div>
+          <p>Mỗi câu chuyện là một cánh cửa. Hãy bắt đầu từ cái tên khiến bạn tò mò nhất.</p>
+        </div>
+        <div id="story-grid" class="story-grid" aria-live="polite">
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+          <div class="loading-card"></div>
+        </div>
+      </section>
+    </section>
 
-    var url = $(location).attr('href');
-    var type = url.match(/type=([^&]+)/);
-    if (type == null) {
-        type = "index";
-    } else {
-        type = type[1];
+    <section id="story-view" class="view shell" hidden>
+      <a class="back-link" href="./"><span aria-hidden="true">←</span> Trở về thư viện</a>
+      <div id="story-detail" class="story-hero"></div>
+      <section class="chapter-section">
+        <div class="chapter-toolbar">
+          <h2>Danh sách chương</h2>
+          <label class="search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>
+            </svg>
+            <span hidden>Tìm chương</span>
+            <input id="chapter-search" class="chapter-search" type="search" placeholder="Tìm tên hoặc số chương…" autocomplete="off">
+          </label>
+        </div>
+        <ul id="chapter-list" class="chapter-list"></ul>
+      </section>
+    </section>
+
+    <section id="chapter-view" class="view reader-shell" hidden>
+      <a class="back-link" id="reader-back" href="./"><span aria-hidden="true">←</span> Danh sách chương</a>
+      <header class="reader-header">
+        <a id="reader-story" class="reader-story" href="./"></a>
+        <h1 id="reader-title"></h1>
+      </header>
+      <div class="reader-tools" aria-label="Tùy chỉnh trình đọc">
+        <span>Không gian đọc</span>
+        <div class="tool-buttons">
+          <button id="font-down" class="tool-button" type="button" aria-label="Giảm cỡ chữ">A−</button>
+          <button id="font-up" class="tool-button" type="button" aria-label="Tăng cỡ chữ">A+</button>
+          <button id="focus-toggle" class="tool-button" type="button" aria-label="Bật chế độ nền giấy" title="Chế độ nền giấy">◐</button>
+        </div>
+      </div>
+      <nav class="chapter-nav" aria-label="Điều hướng chương phía trên">
+        <a class="button button-soft prev-chapter" href="#">← Chương trước</a>
+        <a class="chapter-home" id="chapter-home-top" href="./">Mục lục</a>
+        <a class="button button-primary next-chapter" href="#">Chương sau →</a>
+      </nav>
+      <article id="reader-content" class="reader-card"></article>
+      <nav class="chapter-nav" aria-label="Điều hướng chương phía dưới">
+        <a class="button button-soft prev-chapter" href="#">← Chương trước</a>
+        <a class="chapter-home" id="chapter-home-bottom" href="./">Mục lục</a>
+        <a class="button button-primary next-chapter" href="#">Chương sau →</a>
+      </nav>
+    </section>
+
+    <section id="error-view" class="view shell" hidden>
+      <div class="notice">
+        <h2>Chưa thể mở nội dung</h2>
+        <p id="error-message">Dữ liệu bạn tìm kiếm không tồn tại hoặc chưa tải được.</p>
+        <a class="button button-primary" href="./">Trở về thư viện</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-card">
+        <div class="footer-intro">
+          <a class="brand" href="https://www.phamduytung.com/">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 5.7A2.7 2.7 0 0 1 6.7 3H11a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H4z"/>
+                <path d="M20 5.7A2.7 2.7 0 0 0 17.3 3H14v18a3 3 0 0 1 3-3h3z"/>
+              </svg>
+            </span>
+            <span class="brand-copy"><strong>Phạm Duy Tùng</strong><small>STORIES · KNOWLEDGE</small></span>
+          </a>
+          <p>Không gian chia sẻ kiến thức, công nghệ và những câu chuyện đáng để đọc chậm.</p>
+        </div>
+        <div class="footer-column">
+          <strong>Khám phá</strong>
+          <a href="https://www.phamduytung.com/news/">Bài viết mới</a>
+          <a href="./">Kho truyện</a>
+        </div>
+        <div class="footer-column">
+          <strong>Cộng đồng</strong>
+          <a href="https://www.phamduytung.com/community/">Community</a>
+          <a href="https://github.com/alexblack2202">GitHub</a>
+        </div>
+        <div class="footer-column">
+          <strong>Thông tin</strong>
+          <a href="https://www.phamduytung.com/chinh-sach-bao-mat/">Chính sách bảo mật</a>
+          <a href="https://www.phamduytung.com/contact-us/">Liên hệ</a>
+        </div>
+      </div>
+      <p class="copyright">Copyright © 2016–2026 Phạm Duy Tùng. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const STORY_CATALOG = [
+      { id: "1", title: "TRU TIÊN", label: "Tiên hiệp" },
+      { id: "9033", title: "TRU TIÊN II", label: "Tiên hiệp" },
+      { id: "9035", title: "NGẬN THUẦN NGẬN ÁI MUỘI", label: "Đô thị" },
+      { id: "9277", title: "ĐẤU LA ĐẠI LỤC", label: "Huyền huyễn" }
+    ];
+    const views = [...document.querySelectorAll(".view")];
+    let readerSize = Number(localStorage.getItem("readerSize")) || 20;
+
+    function showView(id) {
+      views.forEach((view) => { view.hidden = view.id !== id; });
     }
 
-    var chapter = url.match(/chapter=([^&]+)/);
-    if (chapter == null) {
-        chapter = "-1";
-    } else {
-        chapter = chapter[1];
+    function getParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        type: params.get("type") || "index",
+        story: params.get("story") || "",
+        chapter: params.get("chapter") || ""
+      };
     }
 
-    var story = url.match(/story=([^&]+)/);
-    if (story == null) {
-        story = "-1";
-    } else {
-        story = story[1];
+    function slugify(value) {
+      return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D")
+        .replace(/[^a-zA-Z0-9]+/g, "-")
+        .replace(/^-|-$/g, "")
+        .toLowerCase();
     }
 
-    var name = url.match(/name=([^&]+)/);
-    if (name == null) {
-        name = "-1";
-    } else {
-        name = name[1];
+    function plainText(html) {
+      const node = document.createElement("div");
+      node.innerHTML = html || "";
+      return (node.textContent || "").replace(/\s+/g, " ").trim();
     }
 
-    var chapter_filename = "data/" + chapter + ".json";
-
-    if (type == 'chapter') {
-
-        $.getJSON(chapter_filename, function(json) {
-            $('#chapter').removeClass("d-none");
-            document.title = json.storyname + " - " + json.header;
-            $('#chapter').children('.content').html(json.datacontent);
-            $('#chapter').find('.storyname').html(json.storyname);
-            $('#chapter').children('.chaptername').html(json.header);
-
-            storyname = json.storyname.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
-			header = json.header.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
-
-            story_link = "?type=story&story=" + story + "&name=" + storyname
-            $('#chapter').find('.storyname').attr("href", story_link);
-
-            var next = "#";
-            var prev = "#";
-            $("#chapter").find('.next').removeClass('disabled');
-            $("#chapter").find('.prev').removeClass('disabled');
-
-            if ('preurl' in json) {
-                prev = json.preurl;
-            } else {
-                $("#chapter").find('.prev').addClass('disabled');
-                prev = '#';
-            }
-
-            if ('nexturl' in json) {
-                next = json.nexturl;
-
-            } else {
-                $("#chapter").find('.next').addClass('disabled');
-                next = '#';
-            }
-
-
-            $("#chapter").find('.next').attr('href', next);
-            $("#chapter").find('.prev').attr('href', prev);
-			
-			 
-// Change Meta Description 
-$('meta[name=description]').attr('content', json.storyname + " - " + json.header);
- 
-// Change Meta Keywords 
-$('meta[name=keywords]').attr('content', json.storyname + ", " + json.header+", "+storyname+", "+header);
-
-callback();
-        });
-
-
-    } else if (type == 'story') {
-        $('#story').removeClass("d-none");
-        var jsonstoryname = "data/s_" + story + ".json";
-
-        //  https://www.phamduytung.com/xem-truyen/?type=story&story=9035&name=ngan-thuan-ngan-ai-muoi
-
-        $.getJSON(jsonstoryname, function(json) {
-
-            document.title = json.storyname;
-            $('#story').find('.storyname').html(json.storyname);
-
-            $('#story').find('.img').attr('src', json.imageurl);
-            $('#story').find('.shortcontent').html(json.shortcontent.replace(/(<br\s*\/?>){3,}/gi, '<br>'));
-            $('#story').children('.author').html("<b>Tác giả: </b>" + json.author);
-// Change Meta Description 
-$('meta[name=description]').attr('content', json.storyname +" - "+ json.author);
-
-storyname = json.storyname.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
- 
-// Change Meta Keywords 
-$('meta[name=keywords]').attr('content', json.storyname + ", " + json.author+", "+storyname);
-
-callback();
-        });
-
-        var jsonstorychapter = "data/chapter_" + story + ".json";
-        $.getJSON(jsonstorychapter, function(json) {
-            $('#story').find('.chapter').html("");
-            for (i = 0; i < json.length; i++) {
-                let chaptername = json[i].header;
-                let link = json[i].url;
-                $('#story').find('.chapter').append("<li class='col-md-6' style='font-size:16px'><a style='color:#333' href='" + link + "'>" + chaptername + "</a></li>");
-            }
-        });
-    } else {
-        $('#index').removeClass("d-none");
-		$('meta[name=description]').attr('content', "ngan thuan ngan ai muoi, tru tien, tru tien 2");
-
-storyname = json.storyname.latinize().replace(/ /g, "-").replace(":", "").toLowerCase();
- 
-// Change Meta Keywords 
-$('meta[name=keywords]').attr('content',  "ngan thuan ngan ai muoi, tru tien, tru tien 2, tieu dinh,");
-        callback();
+    function setMeta(title, description, keywords) {
+      document.title = title;
+      document.querySelector('meta[name="description"]').content = description;
+      document.querySelector('meta[name="keywords"]').content = keywords;
     }
-}
 
-function load_ga() {
-//     window.dataLayer = window.dataLayer || [];
+    async function fetchJSON(path) {
+      const response = await fetch(path, { credentials: "same-origin" });
+      if (!response.ok) throw new Error(`Không tìm thấy dữ liệu (${response.status}).`);
+      return response.json();
+    }
 
-//     function gtag() {
-//         dataLayer.push(arguments);
-//     }
-//     gtag('js', new Date());
+    function storyUrl(story) {
+      return `?type=story&story=${story.id}&name=${slugify(story.storyname || story.title)}`;
+    }
 
-//     gtag('config', 'UA-114911596-1');
-}
-re_load(load_ga);
-   </script>
-  
-  
-      <script data-cfasync="false">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    async function renderIndex() {
+      showView("index-view");
+      setMeta(
+        "Kho truyện — Phạm Duy Tùng",
+        "Kho truyện trực tuyến của Phạm Duy Tùng — đọc truyện miễn phí với giao diện hiện đại, dễ đọc trên mọi thiết bị.",
+        "đọc truyện, truyện online, Phạm Duy Tùng, Tru Tiên, Đấu La Đại Lục"
+      );
+      const grid = document.getElementById("story-grid");
+      const stories = await Promise.all(STORY_CATALOG.map(async (item) => {
+        try { return { ...item, ...(await fetchJSON(`data/s_${item.id}.json`)) }; }
+        catch (_) { return item; }
+      }));
+      grid.innerHTML = stories.map((story) => {
+        const summary = plainText(story.shortcontent) || "Một thế giới đang chờ bạn bước vào và khám phá từng chương truyện.";
+        const image = story.imageurl
+          ? `<img src="${story.imageurl}" alt="Bìa truyện ${story.storyname || story.title}" loading="lazy">`
+          : "";
+        return `
+          <a class="story-card" href="${storyUrl(story)}">
+            <div class="story-cover">${image}</div>
+            <div class="story-info">
+              <span class="pill">${story.label}</span>
+              <h3>${story.storyname || story.title}</h3>
+              <p>${summary}</p>
+              <span class="text-link">Mở truyện <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>`;
+      }).join("");
+    }
 
-  gtag('config', 'UA-114911596-1');
-</script>
+    async function renderStory(storyId) {
+      if (!storyId) throw new Error("Thiếu mã truyện.");
+      const [story, chapters] = await Promise.all([
+        fetchJSON(`data/s_${storyId}.json`),
+        fetchJSON(`data/chapter_${storyId}.json`)
+      ]);
+      showView("story-view");
+      const summaryText = plainText(story.shortcontent);
+      setMeta(
+        `${story.storyname} — Kho truyện Phạm Duy Tùng`,
+        `${story.storyname} — ${story.author}. ${summaryText.slice(0,130)}`,
+        `${story.storyname}, ${story.author}, ${slugify(story.storyname)}, đọc truyện online`
+      );
+      document.getElementById("story-detail").innerHTML = `
+        <div class="story-poster">
+          <img src="${story.imageurl}" alt="Bìa truyện ${story.storyname}">
+        </div>
+        <div class="story-detail">
+          <span class="eyebrow">Tác phẩm chọn lọc</span>
+          <h1>${story.storyname}</h1>
+          <div class="author-line">Tác giả · ${story.author || "Đang cập nhật"}</div>
+          <div class="story-summary">${story.shortcontent || ""}</div>
+          <div class="button-row">
+            ${chapters[0] ? `<a class="button button-primary" href="${chapters[0].url}">Đọc từ chương đầu <span aria-hidden="true">→</span></a>` : ""}
+            <a class="button button-soft" href="#chapter-list">Xem mục lục</a>
+          </div>
+        </div>`;
+      renderChapterList(chapters);
+      const search = document.getElementById("chapter-search");
+      search.value = "";
+      search.oninput = () => {
+        const keyword = slugify(search.value);
+        const filtered = keyword
+          ? chapters.filter((chapter) => slugify(`${chapter.chapterindex} ${chapter.header}`).includes(keyword))
+          : chapters;
+        renderChapterList(filtered);
+      };
+    }
+
+    function renderChapterList(chapters) {
+      const list = document.getElementById("chapter-list");
+      if (!chapters.length) {
+        list.innerHTML = '<li class="empty-search">Không tìm thấy chương phù hợp.</li>';
+        return;
+      }
+      list.innerHTML = chapters.map((chapter) => `
+        <li>
+          <a href="${chapter.url}">
+            <span class="chapter-number">${chapter.chapterindex}</span>
+            <span>${chapter.header}</span>
+          </a>
+        </li>`).join("");
+    }
+
+    function setChapterLinks(selector, url, disabled) {
+      document.querySelectorAll(selector).forEach((link) => {
+        link.href = url || "#";
+        link.classList.toggle("disabled", disabled);
+        link.setAttribute("aria-disabled", String(disabled));
+        if (disabled) link.tabIndex = -1;
+      });
+    }
+
+    async function renderChapter(chapterId, storyId) {
+      if (!chapterId) throw new Error("Thiếu mã chương.");
+      const chapter = await fetchJSON(`data/${chapterId}.json`);
+      const resolvedStoryId = storyId || String(chapter.storeid || "");
+      const storyLink = `?type=story&story=${resolvedStoryId}&name=${slugify(chapter.storyname)}`;
+      showView("chapter-view");
+      setMeta(
+        `${chapter.storyname} — ${chapter.header}`,
+        `${chapter.storyname} — ${chapter.header}. Đọc truyện trực tuyến tại Phạm Duy Tùng.`,
+        `${chapter.storyname}, ${chapter.header}, ${slugify(chapter.storyname)}, đọc truyện`
+      );
+      const readerStory = document.getElementById("reader-story");
+      readerStory.textContent = chapter.storyname;
+      readerStory.href = storyLink;
+      ["reader-back","chapter-home-top","chapter-home-bottom"].forEach((id) => {
+        document.getElementById(id).href = storyLink;
+      });
+      document.getElementById("reader-title").textContent = chapter.header;
+      document.getElementById("reader-content").innerHTML = chapter.datacontent || "";
+      setChapterLinks(".prev-chapter", chapter.preurl, !chapter.preurl);
+      setChapterLinks(".next-chapter", chapter.nexturl, !chapter.nexturl);
+      applyReaderSize();
+      document.onkeydown = (event) => {
+        if (event.target instanceof HTMLInputElement) return;
+        if (event.key === "ArrowLeft" && chapter.preurl) window.location.href = chapter.preurl;
+        if (event.key === "ArrowRight" && chapter.nexturl) window.location.href = chapter.nexturl;
+      };
+    }
+
+    function applyReaderSize() {
+      readerSize = Math.min(28, Math.max(16, readerSize));
+      document.documentElement.style.setProperty("--reader-size", `${readerSize}px`);
+      document.documentElement.style.setProperty("--reader-size-mobile", `${Math.max(16,readerSize - 2)}px`);
+      localStorage.setItem("readerSize", String(readerSize));
+    }
+
+    function showError(error) {
+      showView("error-view");
+      document.getElementById("error-message").textContent =
+        error.message || "Dữ liệu bạn tìm kiếm không tồn tại hoặc chưa tải được.";
+      setMeta("Không tìm thấy nội dung — Phạm Duy Tùng", "Nội dung không tồn tại hoặc chưa thể tải.", "");
+    }
+
+    document.getElementById("font-down").addEventListener("click", () => {
+      readerSize -= 1;
+      applyReaderSize();
+    });
+    document.getElementById("font-up").addEventListener("click", () => {
+      readerSize += 1;
+      applyReaderSize();
+    });
+    document.getElementById("focus-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("focus-mode");
+    });
+
+    (async function init() {
+      try {
+        const params = getParams();
+        if (params.type === "story") await renderStory(params.story);
+        else if (params.type === "chapter") await renderChapter(params.chapter, params.story);
+        else await renderIndex();
+      } catch (error) {
+        console.error(error);
+        showError(error);
+      }
+    })();
+  </script>
+</body>
 </html>
