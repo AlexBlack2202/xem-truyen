@@ -8,9 +8,12 @@
   <meta name="generator" content="Phạm Duy Tùng">
   <meta name="application-name" content="Phạm Duy Tùng — Kho truyện">
   <meta name="description" content="Kho truyện trực tuyến của Phạm Duy Tùng — đọc truyện miễn phí với giao diện hiện đại, dễ đọc trên mọi thiết bị.">
-  <meta name="keywords" content="đọc truyện, truyện online, Phạm Duy Tùng, Tru Tiên, Đấu La Đại Lục">
+  <meta name="keywords" content="đọc truyện, truyện online, Phạm Duy Tùng, Tru Tiên, Đấu La Đại Lục, Đại Niết Bàn">
   <meta name="theme-color" content="#f7f5ff">
   <title>Kho truyện — Phạm Duy Tùng</title>
+
+  <!-- Tải danh mục sớm để dữ liệu sẵn sàng ngay khi giao diện khởi tạo. -->
+  <link rel="preload" href="data/catalog.json" as="fetch" crossorigin="anonymous" fetchpriority="high">
 
   <script
     async
@@ -328,7 +331,43 @@
       background-size: 250% 100%;
       animation: shimmer 1.35s infinite linear;
     }
+    .catalog-loader {
+      display: flex;
+      grid-column: 1 / -1;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 58px;
+      color: var(--primary-dark);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .04em;
+    }
+    .catalog-spinner {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 auto;
+      border: 3px solid rgba(122,99,228,.13);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin .78s linear infinite;
+      filter: drop-shadow(0 5px 8px rgba(122,99,228,.2));
+    }
+    .catalog-spinner::after {
+      position: absolute;
+      inset: 4px;
+      border: 2px solid transparent;
+      border-right-color: var(--cyan);
+      border-radius: inherit;
+      content: "";
+      animation: spin .56s linear infinite reverse;
+    }
     @keyframes shimmer { to { background-position: -250% 0; } }
+    @keyframes spin { to { transform: rotate(1turn); } }
+    @media (prefers-reduced-motion: reduce) {
+      .loading-card, .catalog-spinner, .catalog-spinner::after { animation-duration: 2s; }
+    }
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -617,7 +656,7 @@
       </div>
 
       <div class="stats" aria-label="Thông tin thư viện">
-        <div class="stat"><strong>4</strong><span>Bộ truyện chọn lọc</span></div>
+        <div class="stat"><strong id="story-count">6</strong><span>Bộ truyện chọn lọc</span></div>
         <div class="stat"><strong>Miễn phí</strong><span>Đọc trọn vẹn trực tuyến</span></div>
         <div class="stat"><strong>∞</strong><span>Không gian cho trí tưởng tượng</span></div>
       </div>
@@ -631,6 +670,10 @@
           <p>Mỗi câu chuyện là một cánh cửa. Hãy bắt đầu từ cái tên khiến bạn tò mò nhất.</p>
         </div>
         <div id="story-grid" class="story-grid" aria-live="polite">
+          <div class="catalog-loader" role="status">
+            <span class="catalog-spinner" aria-hidden="true"></span>
+            <span>Đang mở thư viện…</span>
+          </div>
           <div class="loading-card"></div>
           <div class="loading-card"></div>
           <div class="loading-card"></div>
@@ -729,14 +772,9 @@
   </footer>
 
   <script>
-    const STORY_CATALOG = [
-      { id: "1", title: "TRU TIÊN", label: "Tiên hiệp" },
-      { id: "9033", title: "TRU TIÊN II", label: "Tiên hiệp" },
-      { id: "9035", title: "NGẬN THUẦN NGẬN ÁI MUỘI", label: "Đô thị" },
-      { id: "9277", title: "ĐẤU LA ĐẠI LỤC", label: "Huyền huyễn" }
-    ];
     const views = [...document.querySelectorAll(".view")];
     let readerSize = Number(localStorage.getItem("readerSize")) || 20;
+    let storyCatalogPromise;
 
     function showView(id) {
       views.forEach((view) => { view.hidden = view.id !== id; });
@@ -780,6 +818,18 @@
       return response.json();
     }
 
+    function loadStoryCatalog() {
+      if (!storyCatalogPromise) storyCatalogPromise = fetchJSON("data/catalog.json");
+      return storyCatalogPromise;
+    }
+
+    function storyDataPath(story, catalog = []) {
+      const item = typeof story === "object"
+        ? story
+        : catalog.find((candidate) => String(candidate.id) === String(story));
+      return item?.dataPath || "data";
+    }
+
     function storyUrl(story) {
       return `?type=story&story=${story.id}&name=${slugify(story.storyname || story.title)}`;
     }
@@ -789,11 +839,14 @@
       setMeta(
         "Kho truyện — Phạm Duy Tùng",
         "Kho truyện trực tuyến của Phạm Duy Tùng — đọc truyện miễn phí với giao diện hiện đại, dễ đọc trên mọi thiết bị.",
-        "đọc truyện, truyện online, Phạm Duy Tùng, Tru Tiên, Đấu La Đại Lục"
+        "đọc truyện, truyện online, Phạm Duy Tùng, Tru Tiên, Đấu La Đại Lục, Đại Niết Bàn, Kiếm Lai"
       );
       const grid = document.getElementById("story-grid");
-      const stories = await Promise.all(STORY_CATALOG.map(async (item) => {
-        try { return { ...item, ...(await fetchJSON(`data/s_${item.id}.json`)) }; }
+      grid.setAttribute("aria-busy", "true");
+      const catalog = await loadStoryCatalog();
+      document.getElementById("story-count").textContent = String(catalog.length);
+      const stories = await Promise.all(catalog.map(async (item) => {
+        try { return { ...item, ...(await fetchJSON(`${storyDataPath(item)}/s_${item.id}.json`)) }; }
         catch (_) { return item; }
       }));
       grid.innerHTML = stories.map((story) => {
@@ -812,13 +865,16 @@
             </div>
           </a>`;
       }).join("");
+      grid.setAttribute("aria-busy", "false");
     }
 
     async function renderStory(storyId) {
       if (!storyId) throw new Error("Thiếu mã truyện.");
+      const catalog = await loadStoryCatalog();
+      const dataPath = storyDataPath(storyId, catalog);
       const [story, chapters] = await Promise.all([
-        fetchJSON(`data/s_${storyId}.json`),
-        fetchJSON(`data/chapter_${storyId}.json`)
+        fetchJSON(`${dataPath}/s_${storyId}.json`),
+        fetchJSON(`${dataPath}/chapter_${storyId}.json`)
       ]);
       showView("story-view");
       const summaryText = plainText(story.shortcontent);
@@ -879,7 +935,9 @@
 
     async function renderChapter(chapterId, storyId) {
       if (!chapterId) throw new Error("Thiếu mã chương.");
-      const chapter = await fetchJSON(`data/${chapterId}.json`);
+      const catalog = await loadStoryCatalog();
+      const dataPath = storyDataPath(storyId, catalog);
+      const chapter = await fetchJSON(`${dataPath}/${chapterId}.json`);
       const resolvedStoryId = storyId || String(chapter.storeid || "");
       const storyLink = `?type=story&story=${resolvedStoryId}&name=${slugify(chapter.storyname)}`;
       showView("chapter-view");

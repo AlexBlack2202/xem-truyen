@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1000" role="img" aria-labelledby="title description">
+  <title id="title">Bìa truyện Đại Niết Bàn</title>
+  <desc id="description">Bình minh trên thành phố, gợi nhắc một tuổi trẻ bắt đầu lại.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27234f"/>
+      <stop offset="0.52" stop-color="#7558b5"/>
+      <stop offset="1" stop-color="#f3a56f"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff7cb"/>
+      <stop offset="0.45" stop-color="#ffd892" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ffb779" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fffdf4"/>
+      <stop offset="1" stop-color="#ffe4bd"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#241d45" flood-opacity=".5"/>
+    </filter>
+  </defs>
+  <rect width="720" height="1000" fill="url(#sky)"/>
+  <circle cx="360" cy="580" r="250" fill="url(#sun)"/>
+  <g fill="#30284d" opacity=".92">
+    <path d="M0 720h88v-112h70v112h42V568h95v152h38V642h75v78h44V528h104v192h38V610h78v110h48v280H0z"/>
+    <path d="M0 820h110V690h82v130h74V735h124v85h76V666h116v154h138v180H0z" opacity=".72"/>
+  </g>
+  <g fill="#ffdba3" opacity=".8">
+    <path d="M112 650h16v24h-16zm40 0h16v24h-16zm85-35h19v28h-19zm0 47h19v28h-19zm40-47h19v28h-19zm96 67h15v22h-15zm105-98h20v30h-20zm40 0h20v30h-20zm0 48h20v30h-20zm102 23h18v27h-18z"/>
+  </g>
+  <g text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" filter="url(#shadow)">
+    <text x="360" y="116" fill="#ffe8bf" font-size="27" letter-spacing="12">KHẢO NGƯ</text>
+    <text x="360" y="224" fill="url(#titleFill)" font-size="66" font-weight="700" letter-spacing="7">ĐẠI NIẾT BÀN</text>
+    <path d="M190 264h340" stroke="#ffe4bd" stroke-width="2" opacity=".72"/>
+    <text x="360" y="314" fill="#fff4df" font-family="Arial, sans-serif" font-size="22" letter-spacing="5">SỐNG LẠI TUỔI THANH XUÂN</text>
+  </g>
+  <path d="M360 435v245" stroke="#fff2cf" stroke-width="3" stroke-dasharray="3 18" stroke-linecap="round" opacity=".58"/>
+  <circle cx="360" cy="432" r="7" fill="#fff2cf"/>
+  <rect x="22" y="22" width="676" height="956" rx="9" fill="none" stroke="#fff0d5" stroke-width="2" opacity=".42"/>
+</svg>

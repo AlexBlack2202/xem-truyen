@@ -1,0 +1,8 @@
+[
+  {"id": "1", "title": "TRU TIÊN", "label": "Tiên hiệp"},
+  {"id": "9033", "title": "TRU TIÊN II", "label": "Tiên hiệp"},
+  {"id": "9035", "title": "NGẬN THUẦN NGẬN ÁI MUỘI", "label": "Đô thị"},
+  {"id": "9277", "title": "ĐẤU LA ĐẠI LỤC", "label": "Huyền huyễn"},
+  {"id": "10000", "title": "ĐẠI NIẾT BÀN", "label": "Đô thị", "dataPath": "data/dai_niet_ban"},
+  {"id": "10001", "title": "KIẾM LAI", "label": "Tiên hiệp", "dataPath": "data/kiem_lai"}
+]
