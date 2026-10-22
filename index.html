@@ -621,7 +621,7 @@
       </a>
       <nav class="main-nav" aria-label="Điều hướng chính">
         <a href="https://www.phamduytung.com/">Trang chủ</a>
-        <a href="https://www.phamduytung.com/news/">Bài viết</a>
+        <a href="/blog/">Bài viết</a>
         <a href="./" aria-current="page">Kho truyện</a>
       </nav>
     </div>
@@ -753,18 +753,18 @@
         </div>
         <div class="footer-column">
           <strong>Khám phá</strong>
-          <a href="https://www.phamduytung.com/news/">Bài viết mới</a>
+          <a href="/blog/">Bài viết mới</a>
           <a href="./">Kho truyện</a>
         </div>
         <div class="footer-column">
           <strong>Cộng đồng</strong>
-          <a href="https://www.phamduytung.com/community/">Community</a>
+          <a href="https://www.facebook.com/groups/1354425091720104">Community</a>
           <a href="https://github.com/alexblack2202">GitHub</a>
         </div>
         <div class="footer-column">
           <strong>Thông tin</strong>
-          <a href="https://www.phamduytung.com/chinh-sach-bao-mat/">Chính sách bảo mật</a>
-          <a href="https://www.phamduytung.com/contact-us/">Liên hệ</a>
+          <a href="/privacy/">Chính sách bảo mật</a>
+          <a href="/contact/">Liên hệ</a>
         </div>
       </div>
       <p class="copyright">Copyright © 2016–2026 Phạm Duy Tùng. All Rights Reserved.</p>
@@ -972,6 +972,9 @@
     }
 
     function showError(error) {
+      let robots = document.querySelector('meta[name="robots"]');
+      if (!robots) { robots = document.createElement("meta"); robots.name = "robots"; document.head.appendChild(robots); }
+      robots.content = "noindex,follow";
       showView("error-view");
       document.getElementById("error-message").textContent =
         error.message || "Dữ liệu bạn tìm kiếm không tồn tại hoặc chưa tải được.";

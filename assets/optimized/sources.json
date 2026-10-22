@@ -1,0 +1,32 @@
+{
+  "1": {
+    "source": "https://kenh14cdn.com/2016/04-1453741397816.jpg",
+    "optimized": "assets/optimized/1.webp",
+    "width": 533,
+    "height": 800
+  },
+  "9033": {
+    "source": "assets/tru-tien-2-cover.png",
+    "optimized": "assets/optimized/9033.webp",
+    "width": 533,
+    "height": 800
+  },
+  "9035": {
+    "source": "https://images.pexels.com/photos/979003/pexels-photo-979003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "optimized": "assets/optimized/9035.webp",
+    "width": 530,
+    "height": 800
+  },
+  "9277": {
+    "source": "https://images.pexels.com/photos/899738/pexels-photo-899738.jpeg",
+    "optimized": "assets/optimized/9277.webp",
+    "width": 533,
+    "height": 800
+  },
+  "10001": {
+    "source": "assets/kiem-lai-cover.jpg",
+    "optimized": "assets/optimized/10001.webp",
+    "width": 533,
+    "height": 800
+  }
+}

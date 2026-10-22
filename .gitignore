@@ -1,4 +1,6 @@
 /tmp/
+/dist/
+/.xem-truyen-build-*/
 
 # Python bytecode and tool caches
 __pycache__/

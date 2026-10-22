@@ -1,0 +1,118 @@
+{
+  "storyCount": 6,
+  "chapterCount": 6230,
+  "stories": [
+    {
+      "id": "1",
+      "title": "Tru Tiên",
+      "chapterCount": 258,
+      "outOfOrderPositions": 0
+    },
+    {
+      "id": "9033",
+      "title": "TRU TIÊN II",
+      "chapterCount": 128,
+      "outOfOrderPositions": 0
+    },
+    {
+      "id": "9035",
+      "title": "NGẬN THUẦN NGẬN ÁI MUỘI",
+      "chapterCount": 2205,
+      "outOfOrderPositions": 0
+    },
+    {
+      "id": "9277",
+      "title": "ĐẤU LA ĐẠI LỤC",
+      "chapterCount": 517,
+      "outOfOrderPositions": 0
+    },
+    {
+      "id": "10000",
+      "title": "Đại Niết Bàn",
+      "chapterCount": 956,
+      "outOfOrderPositions": 0
+    },
+    {
+      "id": "10001",
+      "title": "Kiếm Lai",
+      "chapterCount": 2166,
+      "outOfOrderPositions": 0
+    }
+  ],
+  "structuralErrors": [],
+  "contentIssues": [
+    {
+      "storyId": "9035",
+      "chapterId": "5534",
+      "header": "Chương 1322: Vô đề",
+      "type": "short-content",
+      "textLength": 22,
+      "status": "Requires source verification; content retained"
+    },
+    {
+      "storyId": "9035",
+      "chapterId": "5708",
+      "header": "Chương 1496: Thân phận ở phía sau",
+      "type": "unicode-replacement-character",
+      "status": "Requires source verification; content retained"
+    },
+    {
+      "storyId": "9035",
+      "chapterId": "5711",
+      "header": "Chương 1499: Kệ bọn họ lăn qua lăn lại đi",
+      "type": "unicode-replacement-character",
+      "status": "Requires source verification; content retained"
+    },
+    {
+      "storyId": "9035",
+      "chapterId": "5712",
+      "header": "Chương 1500: Lễ khánh thành khách sạn của gia tộc Doughtlast",
+      "type": "unicode-replacement-character",
+      "status": "Requires source verification; content retained"
+    },
+    {
+      "storyId": "9035",
+      "type": "duplicate-chapter-content",
+      "chapters": [
+        {
+          "storyId": "9035",
+          "chapterId": "5900",
+          "header": "Chương 1688: Xe nổ bánh"
+        },
+        {
+          "storyId": "9035",
+          "chapterId": "5901",
+          "header": "Chương 1689: Hại người ích ta"
+        }
+      ],
+      "status": "No trustworthy replacement found locally; content retained"
+    },
+    {
+      "storyId": "9035",
+      "type": "duplicate-chapter-content",
+      "chapters": [
+        {
+          "storyId": "9035",
+          "chapterId": "5915",
+          "header": "Chương 1703: Mạo Hiểm Trong Nháy Mắt"
+        },
+        {
+          "storyId": "9035",
+          "chapterId": "5916",
+          "header": "Chương 1704: Mạo Hiểm Trong Nháy Mắt"
+        }
+      ],
+      "status": "No trustworthy replacement found locally; content retained"
+    }
+  ],
+  "suggestedNoindexChapterIds": [
+    "5534",
+    "5901",
+    "5916"
+  ],
+  "notes": [
+    "Suggested noindex IDs are editorial review hints; this report does not change page metadata.",
+    "Kiếm Lai printed chapter numbers intentionally follow its PDF source, including repeats and restarts. Do not reorder by title.",
+    "No reliable alternative Ngận Thuần Ngận Ái Muội source was found in the local tmp files or manifests during review."
+  ]
+}
